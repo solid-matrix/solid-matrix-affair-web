@@ -7,6 +7,7 @@
                 <div>{{ search }}</div>
             </div>
         </template>
+
         <div class="not-found" v-if="designs.length === 0">
             <div>Not Found</div>
             <div>未找到</div>

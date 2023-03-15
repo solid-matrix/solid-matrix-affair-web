@@ -10,7 +10,9 @@
             <slot></slot>
         </main>
         <!-- Footer -->
-        <layout-footer />
+        <footer>
+            <layout-footer />
+        </footer>
         <!-- Nav -->
         <nav>
             <div class="placeholder"></div>
@@ -18,7 +20,7 @@
                 <div class="navbar">
                     <sm-input-group>
                         <sm-input-button icon="back" @click="$router.back()" />
-                        <sm-input-button icon="image" @click="$router.push({ name: 'catalogs-home' })" />
+                        <sm-input-button icon="home" @click="$router.push({ name: 'catalogs-home' })" />
                         <sm-input-text search @keyup.enter="onSearch" v-model="searchInput" />
                         <sm-input-button icon="search" @click="onSearch" />
                     </sm-input-group>
@@ -60,12 +62,12 @@ const onSearch = () => {
 
 .layout {
     min-height: 100vh;
-    background-color: $layout-bg-color;
-    color: $layout-color;
+    background-color: $primary-color;
+    color: $auxiliary-color;
 }
 
 header {
-    min-height: $header-height;
+    min-height: $size-8;
 
     padding: 16px 0;
     font-size: $sm-font-size;
@@ -76,8 +78,7 @@ header {
 }
 
 main {
-    background-color: $main-bg-color;
-    color: $main-color;
+    background-color: $auxiliary-color;
     box-shadow: 0 0 16px black;
     border-left: 3px solid $primary-color;
     border-right: 3px solid $primary-color;
@@ -93,7 +94,7 @@ footer {
 
 nav {
     .placeholder {
-        height: $navbar-height;
+        height: $size-8;
     }
 
     .fixed {
