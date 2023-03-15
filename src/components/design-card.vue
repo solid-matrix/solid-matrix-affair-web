@@ -1,6 +1,6 @@
 <template>
     <div class="design-card">
-        <sm-img class="cover" :src="design.url.thumbnail" />
+        <sm-img class="cover" :src="design.url.medium" />
         <div class="name">
             {{ design.name }}
         </div>
